@@ -1,0 +1,153 @@
+:root {
+    --background-dark: #111111;
+    --background-light: #ffffff;
+
+    --background-dark-border: #1E1E1E;
+    --background-light-border: #ddd;
+
+    --background-dark-2: #171717;
+
+    --background-button-light: #dadada;
+
+    --text-dark: #000000;
+    --text-light: #dadada; 
+    --text-light-less: #ffffffc5; 
+    --text-muted: #000000a9;
+    
+    --text-muted-light: #3a3a3aa9;
+    --text-muted-dark: #cacacaa9;
+
+    --background-contrast-connect-dark: rgba(255, 255, 255, 0.486);
+    --background-contrast-connect-light: rgba(0, 0, 0, 0.562);
+
+    --text-shadow-light: 0 0 25px rgb(255, 255, 255),
+                 0 0 35px rgba(252, 252, 252, 0.76),
+                 0 0 45px rgba(190, 223, 255, 0.904);
+
+    --text-shadow-dark: 0 0 25px rgb(117, 160, 201),
+                0 0 35px #eeeeee,
+                0 0 45px rgba(252, 252, 252, 0.904);
+
+
+    --color-blur-dark: #284552; 
+    --color-blur-dark2: #5d8394; 
+    --color-blur-light: rgb(117, 160, 201);
+
+    --color-selected-calendar-dark: #284552; 
+    --color-selected-calendar-light: rgba(117, 160, 201, 0.432);
+
+    --number-card:#284552;
+    --number-card-less:#284552e3;
+
+    --backround-card-inactive:#dfdfdf59;
+
+    --secondary: #8c8c8c; 
+    --success: #a4d68e; 
+    --danger: #dc3545; 
+
+    --highlight-light: #ffffff;
+    --highlight-dark: rgb(117, 160, 201);
+
+    --highlight-about: #98d17f;
+
+    --background-conf-light: #DCDCDC;
+    --background-conf-dark: #171717;
+
+    --background-card-dark: #e6e6e6;
+
+    --placeholder-text-light: #333;
+
+    --calendar-enabled-light: #f3f3f3;
+    --calendar-enabled-dark: #464646;
+
+    --shadow-menu-light:rgb(209, 209, 209); 
+    --shadow-menu-dark:rgb(43, 43, 43); 
+
+    /* por borrar ->*/
+
+    --border-color: #dee2e6; 
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    --title-blue:#00253D;
+    --transparent:#ffffff00;
+    --backround-conect-blue:#7390c798;
+    --title-light-transparent:#ffffffbe;
+    --backround-button:#7390c7d8;
+    --backround-button-hover:#7390c7b2;
+    --color-button:#ffffff;
+    --predominant-circle:#c5ff69;
+    --second-predominant-circle:#b2a2f8;
+    --third-predominant-circle:#c1d6f8;
+    --color-title-text:#00BCD4;
+}
+
+:root {
+    --background: var(--background-dark);
+    --background2: var(--background-dark-2);
+    --text: var(--text-light);
+
+    --background-border: var(--background-dark-border);
+
+    --text-button: var(--text-dark);
+    --background-button: var(--background-button-light);
+
+    --backround-contrast: var(--background-contrast-connect-dark);
+    --text-muted-contrast: var(--text-muted-light);
+
+    --highlight:var(--highlight-light);
+
+    --text-shadow-highlight: var(--text-shadow-light);
+
+
+    --color-blur: var(--color-blur-dark);
+    --color-blur2: var(--color-blur-dark2);
+
+    --background-conf: var(--background-conf-dark);
+
+    --color-selected-calendar: var(--color-selected-calendar-dark);
+
+    --background-card: var(--background-card-dark);
+
+    --placeholder-text: var(--text-light);
+
+    --calendar-enabled: var(--calendar-enabled-dark);
+
+    --shadow-menu: var(--shadow-menu-dark);
+
+    --text-muted: var(--text-muted-light)
+}
+
+[data-theme="light"] {
+
+    --background: var(--background-light);
+    --background2: var(--background-light);
+    --text: var(--text-dark);
+
+    --background-border: var(--background-light-border);
+
+    --text-button: var(--text-light);
+    --background-button: var(--background-dark);
+
+    --backround-contrast: var(--background-contrast-connect-light);
+    --text-muted-contrast: var(--text-muted-dark);
+
+    --highlight:var(--highlight-dark);
+
+    --text-shadow-highlight: var(--text-shadow-dark);
+
+    --color-blur: var(--color-blur-light);
+    --color-blur2: var(--color-blur-light);
+
+    --background-conf: var(--background-conf-light);
+
+    --color-selected-calendar: var(--color-selected-calendar-light);
+
+    --background-card: var(--background-light);
+
+    --placeholder-text: var(--placeholder-text-light);
+
+    --calendar-enabled: var(--calendar-enabled-light);
+
+    --shadow-menu: var(--shadow-menu-light);
+
+    --text-muted: var(--text-muted-dark)
+}

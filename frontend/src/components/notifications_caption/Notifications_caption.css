@@ -1,0 +1,119 @@
+@import '@src/variables.css';
+
+
+.notification-caption-square{
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    z-index: 3;
+
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 19vh;
+    
+
+}
+.notification-caption-square h1{
+    font-size: 2rem;
+
+}
+.notification-caption-square .p-noti{
+    margin-top: 10px;
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+    height: auto;
+    /* border: 1px solid red; */
+}
+.notification-caption-square .caption-container{
+    /* border: 1px solid rgb(9, 255, 0); */
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.notification-caption-square .caption-container .caption{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.notification-caption-square .caption-container .caption p{
+    margin-bottom: 2px;
+    margin-left: 5px;
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+}
+
+
+.config-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+  
+
+@media screen and (max-width: 768px) {
+
+    .notification-caption-square{
+        padding: 10px;
+        border-radius: 20px;
+        position: relative;
+    
+    }
+    .notification-caption-square h1{
+        font-size: 1.2rem;
+    
+    }
+    .notification-caption-square p{
+        margin-top: 10px;
+        font-size: 0.7rem;
+    }
+    .notification-caption-square .p-noti{
+        font-size: 0.7rem;
+    }
+    .notification-caption-square .caption-container{
+        /* border: 1px solid rgb(9, 255, 0); */
+        width: 97%;    
+    }
+    .notification-caption-square .caption-container .caption p{
+        margin-bottom: 5px;
+        margin-left: 3px;
+    }
+
+    
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .notification-caption-square{
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+    
+    }
+    .notification-caption-square h1{
+        font-size: 1.8rem;
+    
+    }
+    .notification-caption-square p{
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+    .notification-caption-square .p-noti{
+        font-size: 0.9rem;
+    }
+    .notification-caption-square .caption-container{
+        /* border: 1px solid rgb(9, 255, 0); */
+        width: 55%;    
+    }
+    .notification-caption-square .caption-container .caption p{
+        margin-bottom: 10px;
+        margin-left: 3px;
+    }
+
+    
+}

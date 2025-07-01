@@ -1,0 +1,169 @@
+@import '@src/variables.css';
+
+.square3 {
+    width: 60%;
+    height: 40%;
+    max-height: 155px;
+    max-width: 350px;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    display: flex;
+    transform: translate(-50%, -70%);
+    justify-content: center;
+    align-items: center;
+
+}
+.square3 .day{
+    /* border: 1px solid red; */
+    width: 20%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+}
+.square3 .day .number-week{
+    color: var(--text-dark);
+    font-size: 2.6rem;
+    margin-right: 30%;
+    height: 42px;
+
+}
+.square3 .day .day-week{
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-right: 30%;
+
+}
+.square3 .info-square3{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+
+}
+.square3 .info-square3 .info-square3-hour{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-left: 15%;
+
+}
+.square3 .info-square3 .info-square3-hour svg{
+    margin-top: 2.5px;
+    width: 15px;
+    height: 15px;
+
+}
+.square3 .info-square3 .info-square3-button{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 3%;
+
+}
+.square3 .info-square3 .info-square3-button p{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 15px;
+    color: var(--text-dark);
+
+}
+.square3 .info-square3 h3{
+    margin-left: 15%;
+}
+.square3 .info-square3 p{
+    color: var(--secondary);
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 0.9rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .square3 {
+        width: 220px;
+        height: 100px;
+        border-radius: 20px;
+        padding: 3%;    
+        margin-top: 10%;
+    }
+
+    .square3 .info-square3{
+        width: 80%;
+        height: 90%;
+        margin: 0 auto;
+    }
+
+    .square3 .day .number-week{
+        margin-right: 0%;
+        height: 30px;
+        font-size: 2rem;
+    
+    }
+    .square3 .day .day-week{
+        margin-right: 0%;
+        font-size: 1rem;
+    
+    }
+    .square3 .info-square3 p{
+        font-size: 0.8rem;
+    }
+    .square3 .info-square3 h3{
+        font-size: 1rem;
+    }
+    .square3 .info-square3 .info-square3-hour svg{
+        width: 10px;
+        height: 10px;
+    }
+    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .square3 {
+        width: 62%;
+        height: 12%;
+        max-height: 130px;
+    }
+    .square3 .day .number-week{
+        font-size: 2.3rem;
+        margin-right: 25%;
+        height: 37px;
+    
+    }
+    .square3 .day .day-week{
+        font-size: 1.1rem;
+        margin-right: 25%;
+    
+    }
+
+    .square3 .info-square3 p{
+        font-size: 1rem;
+    }
+    .square3 .info-square3 .info-square3-button p{
+        padding-top: 2px;
+        padding-bottom: 6px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-radius: 15px;
+        color: var(--text-dark);
+    
+    }
+}

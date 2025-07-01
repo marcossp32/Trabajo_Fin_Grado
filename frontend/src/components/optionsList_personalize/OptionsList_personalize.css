@@ -1,0 +1,7 @@
+@import '@src/variables.css';
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

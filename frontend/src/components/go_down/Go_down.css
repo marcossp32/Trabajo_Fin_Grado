@@ -1,0 +1,58 @@
+.go-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita que la flecha salga del círculo */
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    stroke: var(--text);
+    position: absolute;
+    transform: translateY(-100%); /* Inicia fuera del círculo en la parte superior */
+    animation: moveArrow 2.5s infinite ease; /* Animación fluida y continua */
+}
+
+/* Animación fluida de la flecha */
+@keyframes moveArrow {
+    0% {
+        transform: translateY(-150%); /* Fuera del círculo, parte superior */
+    }
+    100% {
+        transform: translateY(200%); /* Fuera del círculo, parte inferior */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .go-down {
+        height: 50px;
+        width: 50px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+
+    }
+    .arrow {
+        width: 18px;
+        height: 18px;
+    }
+}

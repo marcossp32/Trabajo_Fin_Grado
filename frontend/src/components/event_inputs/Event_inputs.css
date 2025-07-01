@@ -1,0 +1,116 @@
+@import '@src/variables.css';
+* {
+    box-sizing: border-box;
+}
+
+.event-info-square{
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    z-index: 3;
+
+    padding: 30px;  
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.event-info-square h1{
+    font-size: 2.5rem;
+}
+.event-info-square p{
+    font-size: 1rem;
+    /* margin-top: 1rem; */
+}
+
+.event-info-cont{
+    /* border: 1px solid red; */
+    /* margin-top: 1rem; */
+
+    width: 100%;
+    height: 60%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.event-info-square .save-button{
+    all: unset;
+    cursor: pointer;
+    background-color: var(--background-button);
+    color: var(--text-button);
+    padding: 10px 40px;
+    border-radius: 30px;
+    min-width: 54px;
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .event-info-square{
+        padding: 20px;  
+        grid-column: span 2;
+        overflow: visible;
+    }
+    .event-info-square h1{
+        font-size: 1.2rem;
+    }
+    .event-info-square p{
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+    }
+    .event-info-cont{
+
+        height: 80%;
+
+    }
+
+    .event-info-square  .save-button{
+
+        font-size: 0.8rem;
+        padding: 10px 34px;
+        margin-top: 0rem;
+        min-width: 49px;
+    
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .event-info-square{
+        padding: 30px;  
+        grid-column: span 2;
+        overflow: visible;
+    }
+    .event-info-square h1{
+        font-size: 1.8rem;
+    }
+    .event-info-square p{
+        font-size: 1rem;
+        margin-top: 0.6rem;
+    }
+
+    .event-info-cont{
+
+        height: 75%;
+
+    }
+
+    .save-button{
+
+        padding: 10px 34px 10px 34px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-top: 0rem;
+    
+    }
+    
+}

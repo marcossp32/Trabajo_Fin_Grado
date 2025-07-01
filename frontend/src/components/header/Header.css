@@ -1,0 +1,244 @@
+@import '@src/variables.css';
+
+*{
+    font-family: "Faustina", serif;
+    
+}
+header{
+    /* border: 1px solid greenyellow; */
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:3%;
+
+}
+header a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+header .header-left{
+    width: auto;
+    /* border: 1px solid orangered; */
+}
+header .header-left h1 {
+
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    color: var(--text);
+    
+}
+
+header .header-right{
+    /* border: 1px solid rgb(0, 255, 21); */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-right #a-connect{
+
+    cursor: pointer;
+
+    color: var(--text-button); 
+    background-color: var(--background-button);
+
+    /* padding: 12px 32px; */
+
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    border-radius: 15px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header .header-right a{
+    display: inline-flex;
+    padding: 0.5rem 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+    
+}
+header .header-right a img{
+
+    display: inline-block;
+    margin-top: 2px;
+    width: 14px;
+    height: 14px;    
+    cursor: pointer;
+}
+
+
+header .header-right #a-profile{
+    color: var(--text-button);
+    background-color: var(--background-button);
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+
+}
+header .header-right #a-profile svg{
+    width: 16px; 
+    height: 16px;
+    fill: currentColor;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+
+}
+
+
+.profile-overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 45px; 
+    left: 50%;
+    transform: translateX(-50%) scale(0.95); 
+    color: var(--text-button);
+    background-color: var(--background-button);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    z-index: 5;
+
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+
+/* .profile-overlay::before {
+    content: '';
+    position: absolute;
+    top: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-blur);
+    border-radius: 50%;
+    z-index: -1; 
+} */
+
+
+.profile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1); 
+}
+.profile-overlay.open a{
+   color: var(--danger);
+   cursor: pointer;
+}
+.profile-overlay.open a:hover{
+   color: var(--danger);
+   transform: scale(1.05);
+   cursor: pointer;
+   transition: transform 0.1s ease-in;
+}
+
+
+.profile-overlay a {
+    display: block;
+    color: var(--danger);
+    text-decoration: none;
+    padding: 3px 0;
+    font-size: 12px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    header{
+        margin-top: 3px;
+        
+    }
+
+    header .header-left h1 {
+        font-size: 2rem;
+    }
+    
+    header .head-r-a{
+        display: none !important;
+    }
+
+    header .header-right a {
+        font-size: 0.8rem;
+        padding: 0.8rem 1.2rem;
+
+    }
+
+    header .header-right #a-connect {
+        width: 100%;
+        padding-top: 9px;
+        padding-bottom: 11px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 1rem;
+    }
+
+    header .header-right a img {
+        width: 16px;
+        height: 16px;
+        margin-top: 5px;
+    }
+    .profile-overlay {
+        top: 45px; 
+        left: -30%;
+        /* right: 0.1%; */
+        transform: translateX(-50%) scale(0.90); 
+        color: var(--text-button);
+        background-color: var(--background-button);
+        width: 120px;
+        height: 200px;
+
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header .header-right #a-connect{
+        padding: 12px 32px;
+    }
+    .profile-overlay {
+        top: 45px; 
+        left: -30%;
+        /* right: 0.1%; */
+        transform: translateX(-50%) scale(0.90); 
+        color: var(--text-button);
+        background-color: var(--background-button);
+        width: 130px;
+        height: 200px;
+
+    }
+}
+
+
+
+
+

@@ -1,0 +1,186 @@
+*{
+    font-family: "Hammersmith One", sans-serif;
+}
+.container-main-blur {
+    visibility: hidden; 
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    will-change: backdrop-filter, opacity, transform; 
+    transform: scale(0.95); 
+    opacity: 0; 
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+}
+
+/* Estado visible */
+.container-main-blur.visible {
+    visibility: visible; 
+    opacity: 1; 
+    transform: scale(1); 
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s;
+}
+
+/* Contenedor principal */
+.container-main {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 100px);
+    height: 400px;
+    max-width: 650px;
+    background-color: var(--backround-contrast);
+    border-radius: 8px;
+    box-shadow: 0px 0px 89px -17px var(--backround-contrast);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 11;
+}
+
+/* Estilo para el botón de retroceso */
+.go-back {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.go-back a img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease-in-out;
+    color: var(--background-card);
+}
+
+.go-back a img:hover {
+    opacity: 0.7;
+}
+
+/* Título de la página */
+.container-title-1 h1 {
+    color: var(--title-light-transparent);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container-title-2 h1 {
+    font-size: 40px;
+    margin-bottom: 30px;    
+    margin-top: 20px;
+    color: var(--text-light);
+}
+
+/* Mensajes de alerta */
+.alert {
+    color: var(--danger);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Contenedor del botón de Google */
+.appBut-container {
+    margin: 20px 0;
+}
+
+.google-btn {
+    justify-self: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-light);  
+    border-radius: 50px;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 50%;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/* Estilo para el párrafo de términos */
+.container-main p {
+    font-size: 0.9rem;
+    color: var(--text-muted-contrast);
+    margin-top: 40px;
+}
+
+.container-main p a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.container-main p a:hover {
+    text-decoration: underline;
+}
+
+.tobby-hello-connect{
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+
+    top: -20%;
+    right: -12%;
+
+}
+
+.tobby-hello-connect img{
+    height: 16vh;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-main {
+        width: calc(100% - 50px);
+        max-width: 800px;
+    }
+
+    .go-back {
+        top: 11%;
+        left: 10%;
+    }
+
+    .container-title-2 h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;    
+        margin-top: 20px;
+        color: var(--text-light);
+    }
+    
+    .google-btn {
+        width: 80%;
+    }
+
+    .tobby-hello-connect{
+        top: -10%;
+        right: -7%;
+    
+    }
+    
+
+}

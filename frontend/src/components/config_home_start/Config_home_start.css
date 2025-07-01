@@ -1,0 +1,91 @@
+@import '@src/variables.css';
+
+
+.start-home-square{
+    background-color: var(--background);
+    width: 100%;
+    min-height: 32vh;
+    height: 100%;
+    border-radius: 40px;
+    z-index: 3;
+
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+
+}
+.start-home-square h1{
+    font-size: 2rem;
+
+}
+.start-home-square p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.start-ai{
+
+    background-color: var(--background-button);
+    color: var(--text-button);
+    padding: 12px 36px 12px 36px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    font-size: 1.2rem;
+    justify-self: end;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .start-home-square{
+        padding: 10px;
+        border-radius: 20px;
+    
+    }
+    .start-home-square h1{
+        font-size: 1.2rem;
+    
+    }
+    .start-home-square p{
+        margin-top: 10px;
+        font-size: 0.7rem;
+    }
+    .start-ai{
+
+        padding: 8px 24px 8px 24px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+
+    }
+    
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .start-home-square{
+        padding: 20px;
+        border-radius: 20px;
+    
+    }
+    .start-home-square h1{
+        font-size: 1.8rem;
+    
+    }
+    .start-home-square p{
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+    .start-ai{
+
+        padding: 10px 34px 10px 34px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+
+    }
+    
+    
+}

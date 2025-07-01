@@ -1,0 +1,276 @@
+@import '@src/variables.css';
+
+.menu {
+    height: 100%;
+    max-height: 100vh;
+    width: 30%;
+    max-width: 300px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+    overflow: visible;
+}
+
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu h1{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.menu .config-elements{
+    
+    list-style: none;
+
+}
+
+.menu .config-elements li{
+    
+    padding: 8%;
+    margin: 2%;
+    font-size: 1.2rem;
+    max-width: 175px;
+    width: 20vw;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    overflow: hidden;
+
+    /* border: 0.1px solid red; */
+
+}
+.menu .config-elements .section-title{
+    
+    padding: 10px 0px 10px 0px;
+    font-size: 1.1rem;
+    color: var(--text);
+    
+}
+.menu .config-elements li:not(.active):hover {
+    background-color: #4687a31e;
+    border-radius: 20px;
+}
+.menu .config-elements .active {
+    background-color: #4687a348;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.menu .config-elements li i {
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.menu .profile-menu{
+    width: 90%;
+    height: 5%;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.menu .profile-menu:hover{
+    background-color: #4687a31e;
+    border-radius: 20px;
+}
+.menu .profile-menu i{
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+
+/* Botón de la flecha para abrir el menú */
+
+/* Medio círculo con flecha */
+.menu-toggle {
+    position: fixed;
+    top: 36.5%;
+    right: -25px;
+    height: 60px;
+    width: 25px;
+    background-color: var(--background);
+    color: var(--text);
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 101;
+    transition: left 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-toggle.open {
+    position: absolute; 
+    top: 36.5%;
+    left: auto; 
+    right: -25px; 
+    background-color: var(--background);
+    opacity: 1;
+    z-index: 102;
+}
+
+
+
+/* Flecha dentro del círculo */
+.menu-toggle .menu-circle {
+    width: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Ícono de la flecha */
+.menu-toggle i {
+    font-size: 0.7rem;
+}
+
+/* Oculta la flecha cuando el menú está abierto */
+.menu-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+}
+
+li.highlight-error{
+    color: #f44336 !important;
+}
+li i.icon-error {
+    color: #f44336d8 !important;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .menu{
+        width: 30%;
+        padding: 40px 30px;
+        box-shadow: 0px 0px 20px 10px var(--shadow-menu);
+    }
+
+    .menu h1{
+        margin-top: 15%;
+        font-size: 2.3rem;
+
+    }
+    .menu .config-elements {
+    
+        margin-bottom: 15%;
+
+    }
+    .menu .config-elements li{
+    
+        font-size: 1.2rem;
+
+    }
+    .menu-toggle{
+        width: 25px;
+        height: 50px;
+        top: 38%;
+        right: -25px;
+    }
+    .menu-toggle.open {
+        top: 38%;
+        left: auto; 
+        z-index: 104;
+        right: -24.5px;
+        box-shadow: 10px 0px 20px -5px var(--shadow-menu);
+
+    }
+
+    
+}
+@media screen and (max-width: 768px) {
+
+    .menu{
+        width: 45%;
+        padding: 20px 15px;
+        align-content: center;
+        box-shadow: 0px 0px 20px 1px var(--shadow-menu);
+       
+    }
+    .menu h1{
+        font-size: 1.5rem;
+        padding-left: 12px;
+
+    }
+    .menu .config-elements{
+    
+        padding-left: 12px;
+        
+
+    }
+    .menu .config-elements .section-title{
+    
+        font-size: 0.8rem;
+        
+    }
+    .menu .config-elements li{
+    
+        font-size: 0.8rem;
+        padding: 8%;
+        gap: 5px;
+        width: 30vw;
+
+    }
+    .menu .config-elements li i {
+        font-size: 0.9rem;
+    }
+    .menu .profile-menu{
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: start;
+        padding-left: 12px;
+        gap: 5px;
+
+    }
+    .menu .profile-menu i{
+        font-size: 1rem;
+    }
+
+    .menu-toggle{
+        width: 25px;
+        height: 50px;
+        top: 33.5%;
+        right: -25px;
+        box-shadow: 10px 0px 20px -5px var(--shadow-menu);
+    }
+    .menu-toggle.open {
+        top: 33.5%; 
+        left: auto; 
+        z-index: 104;
+        right: -24.5px;
+        box-shadow: 10px 0px 20px -5px var(--shadow-menu);
+
+    }
+
+
+}
+

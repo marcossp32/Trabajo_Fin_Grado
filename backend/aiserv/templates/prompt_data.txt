@@ -1,0 +1,13 @@
+{{ start}}
+{{ date }}
+{{ change_date }}
+{{ place }}
+{{ participants }}
+{{ email_type }}
+{{ link }}
+{{ attachments }}
+{{ details }}
+{{ duration }}
+{% if previous_messages %}
+{{ previousMessages }}
+{% endif %}

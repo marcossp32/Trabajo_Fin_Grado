@@ -1,0 +1,31 @@
+
+
+.tobby-hello{
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: 5;
+    top: 62%;
+    left: 0%;
+}
+.tobby-hello img{
+    height: 16vh;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+    .tobby-hello{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .tobby-hello{
+        display: none;
+    }
+    
+}

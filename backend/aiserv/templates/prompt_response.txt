@@ -1,0 +1,60 @@
+{{ start }}
+{{ email }}
+
+{% if availability %}
+    {{ availability_yes }}
+{% else %}
+    {{ availability_no }}
+{% endif %}
+
+{{ instructions }}
+
+{{ emotion1 }}
+
+{% if emocion_principal_2 %}
+    {{ emotion2 }}
+{% endif %}
+{% if emocion_principal_3 %}
+    {{ emotion3 }}
+{% endif %}
+
+{% if previous_messages %}
+    {{ previousMessages }}
+{% endif %}
+
+{% if config_data['start_config'].get('full_name') %}
+    {{ full_name }}
+{% endif %}
+{% if config_data['start_config'].get('charge') %}
+    {{ charge }}
+{% endif %}
+{% if config_data['start_config'].get('language') %}
+    {{ language }}
+{% endif %}
+{% if config_data['start_config'].get('details') %}
+    {{ details }}
+{% endif %}
+
+{% if config_data['schedule_config'].get('work_hours_from') and config_data['schedule_config'].get('work_hours_to') %}
+    {{ work_hour }}
+{% endif %}
+{% if config_data['schedule_config'].get('no_meetings_hours_from') and config_data['schedule_config'].get('no_meetings_hours_to') %}
+    {{ decline_event_hour }}
+{% endif %}
+{% if config_data['schedule_config'].get('no_meetings_days') %}
+    {{ decline_event_day }}
+{% endif %}
+
+{% if config_data['priority_config'].get('priority_people') %}
+    {{ priority_people }}
+{% endif %}
+{% if config_data['priority_config'].get('priority_issues') %}
+    {{ priority_issues }}
+{% endif %}
+
+{% if config_data['event_config'].get('meeting_duration') %}
+    {{ duration_event }}
+{% endif %}
+{% if config_data['event_config'].get('meeting_limit') %}
+    {{ max_events }}
+{% endif %}

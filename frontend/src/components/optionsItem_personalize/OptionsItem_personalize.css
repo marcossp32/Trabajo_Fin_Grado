@@ -1,0 +1,64 @@
+@import '@src/variables.css';
+
+
+.options-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+.circle-list {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.completed .circle-list {
+    background-color: var(--success); /* Verde claro para completados */
+    border-color: var(--success); /* Borde del mismo color que el fondo */
+}
+
+.completed .tick {
+    color: var(--background-dark); /* Tick negro */
+    font-size: clamp(0.6rem, 1.2vw, 0.9rem);
+}
+
+.tick {
+    display: none; /* Ocultar el tick por defecto */
+}
+
+.completed .tick {
+    display: block; /* Mostrar el tick solo en completados */
+}
+
+label {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.arrow-personalize {
+    font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+
+    .circle-list {
+        width: 20px;
+        height: 20px;
+    }
+    .options-list li {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+
+}

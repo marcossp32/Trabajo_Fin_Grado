@@ -1,0 +1,125 @@
+@import '@src/variables.css';
+
+.notification-item {
+  background-color: var(--background2);
+  border: 1px solid var(--background-border);
+  border-left: 6px solid var(--color-blur);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 5px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+  
+.notification-item:hover {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.notification-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* border: 1px solid red; */
+}
+
+.notification-sender,
+.notification-type {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.notification-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+  color: var(--placeholder-text);
+}
+
+.notification-body {
+  font-size: 14px;
+  color: var(--placeholder-text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.notification-hour {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+
+  .notification-item {
+
+    padding: 8px;
+    margin: 7px 0;
+  }
+  
+  .notification-icons {
+    gap: 5px;
+    margin-bottom: 0px;
+  }
+  
+  .notification-icon-item {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .notification-sender,
+  .notification-type {
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .notification-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 6px 0 4px;
+    color: #333;
+  }
+  
+  .notification-body {
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .notification-hour {
+    margin-top: 8px;
+    font-size: 0.7rem;
+    color: #999;
+  }
+    
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+  .notification-icon-item {
+    align-items: flex-start;
+    /* border: 1px solid red; */
+  }
+
+
+    
+}
+  
+  

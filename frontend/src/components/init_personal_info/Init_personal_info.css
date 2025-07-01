@@ -1,0 +1,67 @@
+@import '@src/variables.css';
+
+.personal-info-square{
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    min-height: 35vh;
+    border-radius: 40px;
+    z-index: 3;
+    grid-column: span 2;
+
+    padding: 20px;
+}
+.personal-info-square h1{
+    font-size: 2rem;
+}
+.personal-info-square p{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.init-personal-cont{
+    width: 100%;
+    height: 70%;
+    /* padding-top: 1%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+
+    .personal-info-square{
+        padding: 20px;
+    }
+
+    .personal-info-square h1{
+        font-size: 1.2rem;
+    }
+    .personal-info-square p{
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .personal-info-square{
+        padding: 20px;
+    }
+
+    .personal-info-square h1{
+        font-size: 1.8rem;
+    }
+    .personal-info-square p{
+        font-size: 1rem;
+        margin-top: 0.6rem;
+    }
+    
+    
+}

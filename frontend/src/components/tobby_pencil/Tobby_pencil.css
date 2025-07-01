@@ -1,0 +1,32 @@
+
+.tobby_pencil{
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: 5;
+    right: 15%;
+}
+.tobby_pencil img{
+    height: 15vh;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+    .tobby_pencil{
+        top: 350%;
+        right: 10%;
+    }
+    
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .tobby_pencil{
+        top: 420%;
+        right: 10%;
+    }
+    
+}

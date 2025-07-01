@@ -1,0 +1,168 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    /* border: 1px solid green; */
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    flex-grow: 0;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    outline: none;
+    color: var(--placeholder-text); /* Color del texto normal */
+    background-color: var(--background2);
+    border: 1px solid var(--background-border);
+}
+.input-group textarea {
+    height: 80%;
+    resize: none;
+    
+}
+
+/* Placeholder de los inputs */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: var(--placeholder-text); /* Gris claro */   
+}
+
+/* Placeholder del select */
+.input-group select {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--background2);
+    color: var(--placeholder-text);
+}
+
+/* Mantener gris en la opción por defecto */
+.input-group select option[disabled] {
+    color: var(--placeholder-text); /* Gris claro */
+}
+
+/* Detectar si el usuario seleccionó una opción válida */
+.input-group select:focus option:not([disabled]) {
+    color: var(--placeholder-text); /* Cambiar a negro si no es la opción por defecto */
+}
+
+.checkbox-group {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+    max-width: 950px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--background2);
+    border: 0.5px solid var(--background-border);
+}
+
+.checkbox-label {
+  display: inline-flex;  /* en vez de flex */
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-label input,
+.checkbox-label span {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+
+.single-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    font-weight: 500;
+    gap: 10px;
+    /* cursor: pointer; */
+    /* border: 0.5px solid red; */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Opcional: Puedes ajustar el estilo del input checkbox dentro de .single-checkbox si lo deseas */
+.single-checkbox input[type="checkbox"] {
+    margin: 0; 
+    width: auto;
+}
+.input-error {
+    border: 1px solid red !important;
+}
+
+.required-asterisk {
+    color: #f44336;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+.checkbox-label span {
+    display: inline-block;
+    line-height: 1.2;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .input-group label {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+    .checkbox-group {
+        /* border: 1px solid red; */
+        margin-top: 5px;
+        width: 100%;
+        overflow: hidden;
+        justify-content: flex-start;
+
+    }
+    .checkbox-label {
+        font-size: 0.7rem;
+    }
+            
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    
+    .checkbox-group {
+        /* border: 1px solid red; */
+        width: 100%;
+        overflow: hidden;
+
+    }
+}
